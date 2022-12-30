@@ -1,0 +1,248 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Santio_bold;
+    src: url("../fonts/Santio/TTF/Santio\ Bold.ttf");
+}
+
+@font-face {
+    font-family: Tangerine;
+    src: url("../fonts/Tangerine/Tangerine-Bold.ttf");
+}
+
+html {
+    font-size: 62,5%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    max-width: 144rem;
+    height: 100%;
+}
+
+/*  --- FONTS --- */
+.font_santio {
+    font-family: Santio_bold;
+}
+
+.font_roboto {
+    font-family: Roboto;
+}
+
+.font_tangerine {
+    font-family: Tangerine;
+}
+
+
+/*  --- PARALLAX --- */
+.parallax::before {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/cleo-topper.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: -1;
+}
+
+
+/*  --- HEADER & 'SCROLL TO LEARN MORE' --- */
+header {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    padding: 2vh 4vw 0 0;
+}
+
+nav ul li img {
+    width: 1.6vw;
+    margin-right: 1.5vw;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5vw;
+    letter-spacing: .2vw;
+    border-bottom: .25vh solid #e7bc0e;
+}
+
+header p {
+    color: #fff;
+    width: 25vw;
+    font-size: 4.7vw;
+    padding: 0vh 0 2vh 4vw;
+
+}
+
+.scroll_down {
+    height: 50vh;
+    color: #e7bc0e;
+    padding: 5vh 0 30vh 4vw;
+    font-size: 4vw;
+    letter-spacing: -.15vw;
+}
+
+
+/*  --- INDIGENOUS_TEXT --- */
+.indigenous_text p{
+    color: #6bc1a3;
+    font-size: 3.5vw;
+    width: 80vw;
+    margin: auto;
+    line-height: 1.6;
+}
+
+.indigenous_text p span {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.393);
+    padding: .5vh .5vw 0 .5vw;
+    
+}
+
+
+/*  --- 2.5 MILLION --- */
+.numberof_domestic_workers {
+    height: 90vh;
+    padding: 0vh 0 2vh 8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.numberof_domestic_workers img {
+    width: 15vw;
+    padding-bottom: 8vh;
+}
+
+.numberof_domestic_workers h2 {
+    color: #e7bc0e;
+    font-size: 12.5vw;
+}
+
+.numberof_domestic_workers p {
+    color: #e7bc0e;
+    font-size: 3.6vw;
+}
+
+.numberof_domestic_workers p span {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.393);
+    padding: .5vh .5vw 0 .5vw;
+}
+
+
+/* --- '$13 / HR' --- */
+.pay {
+    height: 90vh;
+    padding: 0vh 0 2vh 8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.pay img {
+    width: 15vw;
+    padding-bottom: 12vh;
+}
+
+.pay p {
+    color: #cb91b6;
+    font-size: 3.6vw;
+}
+
+.pay p span {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.393);
+    padding: .5vh .5vw 0 .5vw;
+}
+
+.pay h2 {
+    color: #cb91b6;  
+    font-size: 12.5vw;
+}
+
+
+/*  --- HEALTH INSURANCE --- */
+.health {
+    height: 90vh;
+    padding: 0vh 0 2vh 8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.health img {
+    width: 15vw;
+    padding-bottom: 8vh;
+}
+
+.health h2 {
+    color: #6bc1a3;
+    font-size: 12.5vw;
+}
+
+.health p {
+    color: #6bc1a3;
+    font-size: 3.5vw;
+}
+
+.health p span {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.393);
+    padding: .5vh .5vw 0 .5vw;
+}
+
+/*  --- UNSUNG HEROINES --- */
+.unsung_heroines_text p {
+    font-size: 3.5vw;
+    color: #7eb8e1;
+    width: 63vw;
+    margin-left: 30vw;
+    line-height: 1.6;
+    padding-top: 40vh;
+}
+.unsung_heroines_text p span {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.393);
+    padding: .5vh .5vw 0 .5vw;
+}
+
+
+/*  --- IMG on the BEACH */
+.pic_beach {
+    width: 100vw;
+    height: 100vh;
+    background: url("../img/see.png") no-repeat center center/cover;
+    position: relative;
+}
+
+.pic_beach img {
+    width: 100vw;
+    position: absolute;
+    
+}
+
+
+/* Farbe: / #efefef 
+
+ */
