@@ -1,6 +1,6 @@
 @font-face {
     font-family: Roboto;
-    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+    src: url("../fonts/Roboto/Roboto-Regular.ttf");
 }
 
 @font-face {
@@ -15,7 +15,7 @@
 
 html {
     font-size: 62,5%;
-    height: 100%;
+    height: 100vh;
 }
 
 * {
@@ -27,7 +27,7 @@ html {
 body {
     font-size: 1.6rem;
     max-width: 144rem;
-    height: 100%;
+    height: 100vh;
 }
 
 /*  --- FONTS --- */
@@ -43,17 +43,20 @@ body {
     font-family: Tangerine;
 }
 
+/* !! tidy up !! and create global styles */
+
 
 /*  --- PARALLAX --- */
 .parallax::before {
     content: "";
     width: 100vw;
     height: 100vh;
-    background-image: url("../img/cleo-topper.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url("../img/cleo-topper.jpg") no-repeat;
+    background-position: 70% 0;
+    background-size: cover;
     position: fixed;
     z-index: -1;
+    box-shadow: inset 0 0 0 100vmax rgba(0, 0, 0, 0.451);
 }
 
 
@@ -63,7 +66,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 
 nav ul{
@@ -86,20 +88,30 @@ nav ul li a {
     border-bottom: .25vh solid #e7bc0e;
 }
 
+nav ul li a:hover {
+    box-shadow: 0 0 .3vw .2vw #e7bc0e;
+}
+
 header p {
     color: #fff;
     width: 25vw;
     font-size: 4.7vw;
-    padding: 0vh 0 2vh 4vw;
-
+    margin: 13vh 0 2vh 4vw;
 }
 
-.scroll_down {
+.scroll_down p { 
     height: 50vh;
     color: #e7bc0e;
-    padding: 5vh 0 30vh 4vw;
+    margin: 15vh 0 0vh 4vw;
     font-size: 4vw;
     letter-spacing: -.15vw;
+}
+
+.scroll_down p span {
+    display: inline-block;
+    transform: rotate(265deg);
+    vertical-align: -2vh;
+    font-size: 7vw;
 }
 
 
@@ -107,7 +119,7 @@ header p {
 .indigenous_text p{
     color: #6bc1a3;
     font-size: 3.5vw;
-    width: 80vw;
+    width: 75vw;
     margin: auto;
     line-height: 1.6;
 }
@@ -116,7 +128,6 @@ header p {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.393);
     padding: .5vh .5vw 0 .5vw;
-    
 }
 
 
@@ -154,7 +165,7 @@ header p {
 /* --- '$13 / HR' --- */
 .pay {
     height: 90vh;
-    padding: 0vh 0 2vh 8vw;
+    padding-left: 8vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -184,7 +195,7 @@ header p {
 
 /*  --- HEALTH INSURANCE --- */
 .health {
-    height: 90vh;
+    height: 85vh;
     padding: 0vh 0 2vh 8vw;
     display: flex;
     flex-direction: column;
@@ -218,6 +229,7 @@ header p {
     color: #7eb8e1;
     width: 63vw;
     margin-left: 30vw;
+    margin-bottom: 20vh;
     line-height: 1.6;
     padding-top: 40vh;
 }
@@ -230,19 +242,69 @@ header p {
 
 /*  --- IMG on the BEACH */
 .pic_beach {
-    width: 100vw;
-    height: 100vh;
-    background: url("../img/see.png") no-repeat center center/cover;
-    position: relative;
+    background: #efefef url("../img/see.png") no-repeat center center/cover;
+    background-size: 115vw;
+    overflow: hidden;
+    /* ??? does the 'overflow' make sense here (and the next 1)??? */
 }
 
 .pic_beach img {
-    width: 100vw;
-    position: absolute;
-    
+    width: 115vw;
+    overflow: hidden;
+    vertical-align: bottom;
+    transform: translateX(-5%);
+    transform: translateY(1%);
+    /* with only 'translateY' or 'vertical-align' kommt die spalte auf schmallerem oder breitem screen wieder, WTF?
+     */
 }
 
 
-/* Farbe: / #efefef 
+/*  --- HELP & DONATE --- */
+.help_donate {
+    background-color: #000;
+    color: #fff;
+}
 
- */
+.help_donate p:first-of-type {
+    font-size: 10vw;
+    line-height: 1.1;
+    width: 80vw;
+    padding: 50vh 0 10vh 10vw;
+}
+
+.help_donate button {
+    background-color: #000;
+    border: #fff solid;
+    font-size: 3.2vw;
+    padding: 2vh 2.5vw;
+    margin-left: 10vw;
+}
+
+.help_donate button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.help_donate button:hover {
+    box-shadow: 0 0 .25vw .25vw #efefefe7;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+}
+
+.help_donate p:last-of-type {
+    width: 30vw;
+    font-size: 1.5vw;
+    text-align: center;
+    margin: 30vh auto 0 auto;
+    padding-bottom: 3vh;
+    /* ! 'margin-bottom' uncovers bcg-img ! */
+}
+
+.help_donate p:last-of-type a {
+    text-decoration: none;
+    color: #6bc1a3;
+}
+
+.help_donate p:last-of-type a:hover {
+    text-decoration: #6bc1a3 underline;
+}
+
