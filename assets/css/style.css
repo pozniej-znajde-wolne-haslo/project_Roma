@@ -27,6 +27,7 @@ html {
 body {
     font-size: 1.6rem;
     max-width: 144rem;
+    margin: auto;
     height: 100vh;
 }
 
@@ -253,7 +254,7 @@ header p {
     overflow: hidden;
     vertical-align: bottom;
     transform: translateX(-5%);
-    transform: translateY(1%);
+   /*  transform: translateY(1%); */
     /* with only 'translateY' or 'vertical-align' kommt die spalte auf schmallerem oder breitem screen wieder, WTF?
      */
 }
